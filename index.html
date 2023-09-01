@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Profile</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui.min.css">
 </head>
 <body>
     <header>
@@ -30,7 +31,7 @@
                     <pre>
                         TechStack
                         <code>
-                            Backend: PHP with Laravel, Redies, Laravel Echo, Mysql;
+                            Backend: PHP with Laravel, Redis, Laravel Echo, Mysql;
                             Frontend: Angular(Hybrid mobile app) 
                         </code>
                     </pre>
@@ -104,11 +105,41 @@
                 </form>
             </div>
         </section>
+        <div id="chat-container"></div>
     </main>
     <footer>
         <div class="container">
-            &copy; 2023 John Doe
+            &copy; Creative Commons 2020
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/botui/build/botui.min.js"></script>
+    <script>
+        window.onload = function() {
+          var botui = new BotUI('chat-container');
+            console.log("sjhjdhjskhdk", botui)
+          // Start a conversation
+          botui.message.bot({
+            content: "Hi there! How can I assist you?"
+          });
+          
+          // Handle user input
+          botui.message.add({
+            human: true,
+            content: "I'd like to know more about your projects."
+          });
+          
+          // Continue the conversation
+          botui.message.bot({
+            content: "Sure! Here are some of my recent projects:"
+          });
+          botui.message.bot({
+            content: "1. Link Locality Neighborhood App\n2. cars.iq\n3. kiya"
+          });
+          
+          // You can continue the conversation and respond to user input as needed
+        };
+    </script>      
+
 </body>
 </html>
