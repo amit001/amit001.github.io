@@ -227,3 +227,23 @@ form button:hover {
     }
 }
 
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    font-size: 24px; /* Adjust the size as needed */
+    margin-right: 40px; /* Increased spacing between icons */
+    color: #d0e1e4; /* Change the color as needed */
+    text-decoration: none;
+}
+
+.social-media a:last-child {
+    margin-right: 0; /* No margin after the last icon */
+}
+
+.social-media a:hover {
+    color: #007bff; /* Change the hover color */
+}
+
+
